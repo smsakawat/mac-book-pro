@@ -1,4 +1,4 @@
-// update extra memorey cost
+// update  memory cost
 const memoryCost = document.getElementById("memory-cost");
 function updateMemoryCost(ram) {
   if (ram == "16gb") {
@@ -10,6 +10,7 @@ function updateMemoryCost(ram) {
   updateTotal();
   updateGrandTotal();
 }
+
 // update storage cost
 const storageCost = document.getElementById("storage-cost");
 function updateStorageCost(disk) {
@@ -24,6 +25,7 @@ function updateStorageCost(disk) {
   updateTotal();
   updateGrandTotal();
 }
+
 // update delivery charge
 const deliveryCost = document.getElementById("delivery-cost");
 function updateDeliveryCharge(date) {
@@ -36,6 +38,7 @@ function updateDeliveryCharge(date) {
   updateTotal();
   updateGrandTotal();
 }
+
 // update total price
 const totalPrice = document.getElementById("total-price");
 function updateTotal() {
@@ -46,6 +49,7 @@ function updateTotal() {
     parseFloat(storageCost.innerText) +
     parseFloat(deliveryCost.innerText);
 }
+
 // update grand total
 const grandTotal = document.getElementById("grand-total");
 const inputCode = document.getElementById("code-input");
@@ -53,12 +57,13 @@ function updateGrandTotal() {
   grandTotal.innerText = totalPrice.innerText;
   inputCode.value = "";
 }
-// get discount on grand total for promo code
+// get discount on total price with promo code
 function getDiscount() {
   const promoCode = "stevekaku";
   if (inputCode.value != promoCode) {
     grandTotal.innerText = totalPrice.innerText;
     inputCode.value = "";
+    window.alert("wrong promo code");
   } else if (inputCode.value == promoCode) {
     const discountAmount = parseFloat(totalPrice.innerText) / 5;
     console.log(discountAmount);

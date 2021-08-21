@@ -3,23 +3,40 @@
   width: 80%;
   margin: auto;
 }
-/* image and details container styles*/
+/* image styles*/
 .img-container {
   margin: 0 40px 0;
 }
+.mac-book {
+  height: 340px;
+  width: 67em;
+}
+/* details styles */
 .details-container {
   padding: 0 30px;
 }
-/* price part styles */
+.details-title {
+  font-weight: 600;
+}
+/* price's styles */
 .price-amount {
-  border-bottom: 1px solid rgb(192, 192, 192);
+  border-bottom: 1px solid rgb(211, 211, 211);
 }
 #delivery-charge {
   border-bottom: 2px solid grey;
 }
-.price {
-  padding-left: 60px;
+/* table style*/
+.list-container {
+  width: 50%;
 }
+/* form styles */
 .form-container {
-  margin-left: 468px;
+  margin-left: 484px;
+}
+.promo-text {
+  font-weight: 600;
+}
+/* total styles */
+.final-price {
+  font-weight: 700;
 }

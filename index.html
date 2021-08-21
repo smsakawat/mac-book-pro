@@ -22,14 +22,16 @@
       <section class="main-container my-5">
         <div class="flex-container d-flex justify-content-between p-4">
           <div class="img-container">
-            <img class="img-fluid" src="images/mac.png" alt="" />
+            <img class="mac-book img-fluid" src="images/mac.png" alt="" />
           </div>
           <!-- details  part -->
           <div class="details-container text-start">
-            <h1>Customize your Blue 24-inch iMac with Apple M1 chip</h1>
+            <h1 class="details-title">
+              Customize your Blue 24-inch iMac with Apple M1 chip
+            </h1>
             <p class="mb-5">
               Apple M1 chip with 8-core CPU with 4 performance cores and 4
-              efficiency cores,7-core GPU and 16-core Neural Engine 8GB uified
+              efficiency cores,7-core GPU and 16-core Neural Engine 8GB unified
               memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic Mouse
               Magic Keyboard-US English
             </p>
@@ -90,16 +92,16 @@
             </div>
             <!-- price list -->
             <div class="list-container">
-              <table class="price-lists text-start mb-2">
-                <tr class="price-amount fw-bold">
+              <table class="price-lists table text-start mb-0">
+                <tr class="fw-bold">
                   <td>Best Price</td>
                   <td class="price">$<span id="raw-price">1299</span></td>
                 </tr>
-                <tr class="price-amount fw-bold">
+                <tr class="fw-bold">
                   <td>Extra Memory cost</td>
                   <td class="price">$<span id="memory-cost">0</span></td>
                 </tr>
-                <tr class="price-amount fw-bold">
+                <tr class="fw-bold">
                   <td>Extra Storage cost</td>
                   <td class="price">$<span id="storage-cost">0</span></td>
                 </tr>
@@ -107,7 +109,8 @@
                   <td>Delivery charge</td>
                   <td class="price">$<span id="delivery-cost">0</span></td>
                 </tr>
-                <tr class="price-amount fw-bold">
+                <!-- total price  -->
+                <tr class="fw-bold">
                   <td>Total Price</td>
                   <td class="price">$<span id="total-price">1299</span></td>
                 </tr>
@@ -117,7 +120,8 @@
         </div>
         <!-- promo code part -->
         <div class="form-container">
-          <div class="row g-1">
+          <p class="promo-text mt-0">Add Promo Code</p>
+          <div class="row g-0">
             <div class="col-auto">
               <input type="text" class="form-control" id="code-input" />
             </div>
@@ -133,8 +137,8 @@
           </div>
         </div>
         <hr />
-        <!-- total price part -->
-        <div class="total-price">
+        <!-- grand total price's part -->
+        <div class="final-price">
           <h1 class="text-center">
             Total:$ <span id="grand-total">1299</span>
           </h1>
@@ -143,7 +147,7 @@
     </main>
     <footer></footer>
 
-    <!-- main js -->
+    <!-- main js link-->
     <script src="JS/main.js"></script>
     <!-- bootsrap bundle -->
     <script
