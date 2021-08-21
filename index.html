@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootsrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- external css -->
+    <link rel="stylesheet" href="STYLES/style.css" />
+    <title>MAC-BOOK-PRO</title>
+  </head>
+  <body>
+    <header></header>
+    <!-- main part -->
+    <main>
+      <section class="main-container my-5">
+        <div class="flex-container d-flex justify-content-between p-4">
+          <div class="img-container">
+            <img class="img-fluid" src="images/mac.png" alt="" />
+          </div>
+          <!-- details  part -->
+          <div class="details-container text-start">
+            <h1>Customize your Blue 24-inch iMac with Apple M1 chip</h1>
+            <p class="mb-5">
+              Apple M1 chip with 8-core CPU with 4 performance cores and 4
+              efficiency cores,7-core GPU and 16-core Neural Engine 8GB uified
+              memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic Mouse
+              Magic Keyboard-US English
+            </p>
+
+            <!-- memory part -->
+            <div id="memory-portion my-5">
+              <p class="fw-bold my-0">Memory</p>
+              <button
+                onclick="updateMemoryCost('8gb')"
+                class="btn btn-outline-dark"
+              >
+                8GB unified memory
+              </button>
+              <button
+                onclick="updateMemoryCost('16gb')"
+                class="btn btn-outline-dark"
+              >
+                16GB unified memory
+              </button>
+            </div>
+            <!-- storage part -->
+            <div class="storage-portion my-5">
+              <p class="fw-bold my-0">Storage</p>
+              <button
+                onclick="updateStorageCost('256GB')"
+                class="btn btn-outline-dark"
+              >
+                256GB SSD storage
+              </button>
+              <button
+                onclick="updateStorageCost('512GB')"
+                class="btn btn-outline-dark"
+              >
+                512GB SSD storage
+              </button>
+              <button
+                onclick="updateStorageCost('1TBGB')"
+                class="btn btn-outline-dark"
+              >
+                1TB GB SSD storage
+              </button>
+            </div>
+            <!-- delivery part -->
+            <div class="dilivery-container my-5">
+              <p class="fw-bold my-0">Choose your delivery option</p>
+              <button
+                onclick="updateDeliveryCharge('Aug25')"
+                class="btn btn-outline-dark"
+              >
+                Friday,Aug 25 FREE Prime Delivery
+              </button>
+              <button
+                onclick="updateDeliveryCharge('Aug21')"
+                class="btn btn-outline-dark"
+              >
+                Friday,Aug 21 Delivery charge $20
+              </button>
+            </div>
+            <!-- price list -->
+            <div class="list-container">
+              <table class="price-lists text-start mb-2">
+                <tr class="price-amount fw-bold">
+                  <td>Best Price</td>
+                  <td class="price">$<span id="raw-price">1299</span></td>
+                </tr>
+                <tr class="price-amount fw-bold">
+                  <td>Extra Memory cost</td>
+                  <td class="price">$<span id="memory-cost">0</span></td>
+                </tr>
+                <tr class="price-amount fw-bold">
+                  <td>Extra Storage cost</td>
+                  <td class="price">$<span id="storage-cost">0</span></td>
+                </tr>
+                <tr id="delivery-charge" class="fw-bold">
+                  <td>Delivery charge</td>
+                  <td class="price">$<span id="delivery-cost">0</span></td>
+                </tr>
+                <tr class="price-amount fw-bold">
+                  <td>Total Price</td>
+                  <td class="price">$<span id="total-price">1299</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- promo code part -->
+        <div class="form-container">
+          <div class="row g-1">
+            <div class="col-auto">
+              <input type="text" class="form-control" id="code-input" />
+            </div>
+            <div class="col-auto">
+              <button
+                onclick="getDiscount();"
+                type="submit"
+                class="btn btn-danger mb-3"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <!-- total price part -->
+        <div class="total-price">
+          <h1 class="text-center">
+            Total:$ <span id="grand-total">1299</span>
+          </h1>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <!-- main js -->
+    <script src="JS/main.js"></script>
+    <!-- bootsrap bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
